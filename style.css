@@ -256,6 +256,8 @@ footer .small {
     }
 
     .years {
+        padding-bottom: 10px;
+        gap: 6px;
         h1 {
             margin-top: 15px;
             font-size: 23px;
@@ -264,10 +266,12 @@ footer .small {
         .ybtn {
             height: 60px;
             font-size: 20px;
-            padding-top: 3px;
+            padding-top: 9px;
         }
     }
     .test {
+        padding-bottom: 10px;
+        gap: 6px;
         h1 {
             margin-top: 15px;
             font-size: 23px;
@@ -276,7 +280,7 @@ footer .small {
         .tbtn {
             height: 60px;
             font-size: 20px;
-            padding-top: 3px;
+            padding-top: 9px;
         }
     }
 }
@@ -294,6 +298,16 @@ footer .small {
         .ybtn {
             font-size: 17px;
             height: 40px;
+            padding-top: 6px;
+        }
+    }
+    .test {
+        padding-bottom: 10px;
+        gap: 6px;
+        .tbtn {
+            font-size: 17px;
+            height: 40px;
+            padding-top: 6px;
         }
     }
 }
