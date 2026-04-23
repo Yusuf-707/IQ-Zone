@@ -253,7 +253,7 @@ footer .small {
 
         .btn {
             height: 60px;
-            font-size: 20px;
+            font-size: 18px;
             padding-top: 9px;
         }
         .ubtn {
@@ -282,8 +282,8 @@ footer .small {
         padding-bottom: 10px;
         gap: 6px;
         .btn {
-            font-size: 17px;
-            height: 50px;
+            font-size: 15px;
+            height: 40px;
             padding-top: 4px;
         }
         .ubtn {
