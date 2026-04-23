@@ -31,6 +31,9 @@ let inglish1518Uruvin = document.querySelector(".inglish1518-uruvin")
     //* fizika
 let fizika1518 = document.querySelector(".fizika1518")
 let fizika1518Uruvin = document.querySelector(".fizika1518-uruvin")
+    //* literature
+let literature1518 = document.querySelector(".kygyzliterature1518")
+let literature1518Lenguage = document.querySelector(".kygyzliteratura1518-language")
 
 // TODO test 18
     //* matematika
@@ -45,7 +48,9 @@ let inglish18Uruvin = document.querySelector(".inglish18-uruvin")
     //* fizika
 let fizika18 = document.querySelector(".fizika18")
 let fizika18Uruvin = document.querySelector(".fizika18-uruvin")
-
+    //* literature
+let literature18 = document.querySelector(".kygyzliterature18")
+let literature18Lenguage = document.querySelector(".kygyzliteratura18-language")
 
 //footer
 let footer = document.querySelector("footer")
@@ -59,7 +64,11 @@ menu.addEventListener("click", () => {
     menus.classList.toggle("hidden")
 })
 
-// ! tests.addEventListener("click", hiddenMenus)
+tests.forEach((e) => {
+    e.addEventListener("click", () => {
+        hiddenMenus()
+    })
+})
 // years boy & girl
 boyYears.addEventListener("click", hiddenMenus)
 
@@ -118,6 +127,11 @@ fizika1518.addEventListener("click", () => {
     testboy1518hidden()
     hiddenMenus()
 })
+literature1518.addEventListener("click", ()=> {
+    literature1518Lenguage.classList.remove("hidden")
+    testboy1518hidden()
+    hiddenMenus()
+})
 //TODO test 18
     //* matematika
 matematika18.addEventListener("click", () => {
@@ -140,6 +154,11 @@ inglish18.addEventListener("click", () => {
     //* fizika
 fizika18.addEventListener("click", () => {
     fizika18Uruvin.classList.remove('hidden')
+    testboy18hidden()
+    hiddenMenus()
+})
+literature18.addEventListener("click", ()=> {
+    literature18Lenguage.classList.remove("hidden")
     testboy18hidden()
     hiddenMenus()
 })
