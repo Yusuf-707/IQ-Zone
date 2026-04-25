@@ -18,6 +18,14 @@ let testBoy10 = document.querySelector(".test-boy-10");
 let testBoy1114 = document.querySelector(".test-boy-1114");
 let testBoy1518 = document.querySelector(".test-boy-1518");
 let testBoy18 = document.querySelector(".test-boy-18");
+// TODO test 10
+let literature10 = document.querySelector(".kygyzliterature10")
+let literature10Lenguage = document.querySelector(".kygyzliterature10-language")
+
+// TODO test 1114
+let literature14 = document.querySelector(".kygyzliterature1114")
+let literature14Lenguage = document.querySelector(".kygyzliterature1114-language")
+
 // TODO test15,18
     //* matematika
 let matematika1518Uruvin = document.querySelector(".matematika1518-uruvin")
@@ -102,6 +110,19 @@ function testboy1518hidden() {
 function testboy18hidden() {
     testBoy18.classList.add("hidden")
 }
+// TODO test 10
+literature10.addEventListener("click", ()=>{
+    literature10Lenguage.classList.remove("hidden")
+    testBoy10.classList.add("hidden")
+    hiddenMenus()   
+})
+// TODO test 11,14
+literature14.addEventListener("click", ()=>{
+    literature14Lenguage.classList.remove("hidden")
+    testboy1518hidden()
+    hiddenMenus()
+})
+
 // TODO test15,18
     //* matematika
 matematika1518.addEventListener("click", () => {
