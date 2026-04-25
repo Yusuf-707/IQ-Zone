@@ -135,6 +135,25 @@ header {
     }
 }
 
+.lt-test {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    background: white;
+    margin-top: -70px;
+    height: 250px;
+    gap: 20px;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px 20px;
+
+    h1 {
+        border-bottom: 2px solid black;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 .test {
     display: flex;
     flex-flow: column;
@@ -154,23 +173,25 @@ header {
         width: 100%;
     }
 
-    .btn {
-        border: 0;
-        border-radius: 20px;
-        width: 80%;
-        transition: 0.5s;
-        text-decoration: none;
-        color: var(--text-color);
-        text-align: center;
-        background: rgb(197, 195, 195);
+}
 
-    }
+.btn {
+    border: 0;
+    border-radius: 20px;
+    width: 80%;
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    background: rgb(197, 195, 195);
+    height: 40px;
+    padding-top: 10px;
+}
 
-    .btn:hover {
-        background-color: black;
-        transform: scale(1.1);
-        color: white;
-    }
+.btn:hover {
+    background-color: black;
+    transform: scale(1.1);
+    color: white;
 }
 
 .hidden {
@@ -232,9 +253,10 @@ footer .small {
     .years {
         padding-bottom: 10px;
         gap: 6px;
+
         h1 {
             margin-top: 15px;
-            font-size: 20px;
+            font-size: 23px;
         }
 
         .ybtn {
@@ -243,22 +265,25 @@ footer .small {
             padding-top: 9px;
         }
     }
+
     .test {
         padding-bottom: 10px;
         gap: 6px;
+
         h1 {
             margin-top: 15px;
-            font-size: 23px;
+            font-size: 20px;
         }
 
-        .btn {
-            height: 60px;
-            font-size: 18px;
-            padding-top: 9px;
-        }
-        .ubtn {
-            padding-top: 14px;
-        }
+    }
+    .btn {
+        height: 60px;
+        font-size: 18px;
+        padding-top: 9px;
+    }
+
+    .ubtn {
+        padding-top: 14px;
     }
 }
 
@@ -272,29 +297,41 @@ footer .small {
     .years {
         padding-bottom: 3px;
         gap: 6px;
+
         .ybtn {
             font-size: 17px;
             height: 40px;
             padding-top: 6px;
         }
     }
+
     .test {
         padding-bottom: 10px;
         gap: 6px;
-        .btn {
-            font-size: 15px;
-            height: 40px;
-            padding-top: 4px;
-        }
-        .ubtn {
-            margin-top: 10px;
-            padding-top: 10px;
-        }
+
+    }
+
+    .btn {
+        font-size: 15px;
+        padding-top: 4px;
+    }
+
+    .ubtn {
+        margin-top: 10px;
+        padding-top: 10px;
     }
 }
 
 @keyframes gradientMove {
-    0% {background-position: 0%}
-    50% {background-position: 100%;}
-    100% {background-position: 0%;}
+    0% {
+        background-position: 0%
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
 }
