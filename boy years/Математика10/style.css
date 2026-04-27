@@ -131,15 +131,20 @@ main {
         gap: 10px;
         border-radius: 20px;
         form {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr 2fr;
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20%;
         }
         input {
+            width: 0;
+            height: 0;
             opacity:0;
         }
         label {
-            display: block;
-            padding: 10px;
+            width: 40%;
+            display: inline;
             margin: 8px 0;
             border: 2px solid #4caf50;
             border-radius: 10px;
