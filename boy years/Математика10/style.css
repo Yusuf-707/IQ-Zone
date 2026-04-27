@@ -236,6 +236,10 @@ footer .small {
             }
         }
     }
+    main {
+        width: 400px;
+        height: 360px;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -253,7 +257,6 @@ footer .small {
             }
         }
     }
-
     main {
         flex-flow: column;
 
