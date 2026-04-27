@@ -140,7 +140,7 @@ main {
             display: flex;
             flex-flow: row;
             flex-wrap: wrap;
-            gap: 20%;
+            gap: 0%;
         }
         input {
             width: 0;
