@@ -132,9 +132,10 @@ main {
         border-radius: 20px;
         form {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: auto auto auto auto;
         }
         label {
+            opacity: 0;
             display: block;
             padding: 10px;
             margin: 8px 0;
