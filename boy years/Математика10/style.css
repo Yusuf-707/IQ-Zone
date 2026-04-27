@@ -130,6 +130,8 @@ main {
         align-items: start;
         gap: 10px;
         border-radius: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
 
         label {
             display: block;
