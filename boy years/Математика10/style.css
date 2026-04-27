@@ -237,8 +237,12 @@ footer .small {
         }
     }
     main {
+        flex-flow: row;
+        flex-wrap: wrap;
+        .test-form {     
         width: 400px;
         height: 360px;
+        }
     }
 }
 
