@@ -134,8 +134,10 @@ main {
             display: grid;
             grid-template-columns: auto auto auto auto;
         }
+        input {
+            opacity:0;
+        }
         label {
-            opacity: 0;
             display: block;
             padding: 10px;
             margin: 8px 0;
