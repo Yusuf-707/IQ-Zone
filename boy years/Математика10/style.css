@@ -132,7 +132,7 @@ main {
         border-radius: 20px;
         form {
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 1fr 2fr 1fr 2fr;
         }
         input {
             opacity:0;
