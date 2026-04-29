@@ -34,8 +34,8 @@ let matematika1518 = document.querySelector(".matematika1518")
 let himiya1518 = document.querySelector(".himiya1518")
 let himiya1518Uruvin = document.querySelector(".himiya1518-uruvin")
     //* inglish
-let inglish1518 = document.querySelector(".inglish1518")
-let inglish1518Uruvin = document.querySelector(".inglish1518-uruvin")
+let technology1518 = document.querySelector(".technology1518")
+let technology1518Uruvin = document.querySelector(".technology1518-uruvin")
     //* fizika
 let fizika1518 = document.querySelector(".fizika1518")
 let fizika1518Uruvin = document.querySelector(".fizika1518-uruvin")
@@ -137,8 +137,8 @@ himiya1518.addEventListener("click", () => {
     hiddenMenus()
 })
     //* inglish
-inglish1518.addEventListener("click", () => {
-    inglish1518Uruvin.classList.remove('hidden')
+technology1518.addEventListener("click", () => {
+    technology1518Uruvin.classList.remove('hidden')
     testboy1518hidden()
     hiddenMenus()
 })
