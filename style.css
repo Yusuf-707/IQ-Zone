@@ -10,7 +10,7 @@
 
 body {
     /* background: linear-gradient(207deg, #67c8c8, #233224); */
-    background: linear-gradient(270deg, #022c22, #16a34a, #7ab48e);
+    background: linear-gradient(270deg, #57D1FF, #0055B5, #57D1FF);
     background-size: 600% 600%;
     animation: gradientMove 10s ease infinite;
     height: 100vh;
@@ -132,6 +132,7 @@ header {
         transform: scale(1.1);
         color: white;
         box-shadow: 0px 0px 10px black;
+        border: 2px solid white;
     }
 }
 
