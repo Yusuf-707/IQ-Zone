@@ -197,6 +197,7 @@ main {
             background-size: 600% 600%;
             animation: gradientMove 10s ease infinite;
             box-shadow: 0px 0px 20px rgb(92, 87, 87);
+            border: 2px solid white;
             font-weight: bold;
             overflow: visible;
         }
