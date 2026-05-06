@@ -19,6 +19,14 @@ let trueText = document.querySelector(".truetext");
 let falseText = document.querySelector(".falsetext");
 //footer
 let footer = document.querySelector("footer");
+}, 1000);
+let randomTest = () => { 
+  testFormes.forEach((testForm) => testForm.classList.add("hidden"));
+  const mathRandom = Array.from(testFormes).sort(() => 0.5 - Math.random());
+  const random10 = mathRandom.slice(0, 10);
+  random10.forEach((testForm) => testForm.classList.remove("hidden"));
+}
+randomTest()
 function hiddenMenus() {
   menus.classList.add("hidden");
 }
@@ -78,13 +86,5 @@ let interval = setInterval(() => {
   };
   minut.textContent = String(minuta).padStart(2, "0");
   secunt.textContent = String(sekunta).padStart(2, "0");
-}, 1000);
-let randomTest = () => { 
-  testFormes.forEach((testForm) => testForm.classList.add("hidden"));
-  const mathRandom = Array.from(testFormes).sort(() => 0.5 - Math.random());
-  const random10 = mathRandom.slice(0, 10);
-  random10.forEach((testForm) => testForm.classList.remove("hidden"));
-}
-randomTest()
 //footer
 footer.addEventListener("click", hiddenMenus);
