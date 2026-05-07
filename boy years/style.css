@@ -296,6 +296,10 @@ main {
             h2 {
                 color: rgb(255, 0, 0);
             }
+            i {
+                background: white;
+                border-radius: 20px;
+            }
         }
     }
 }
