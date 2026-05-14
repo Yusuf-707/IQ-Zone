@@ -10,18 +10,27 @@
 
 :root {
     --text-color: rgb(46, 44, 44);
-    --background-color:  linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
+    --background-color: linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
 }
 
 body {
     /* background: linear-gradient(207deg, #67c8c8, #233224); */
-    background: var(--background-color);
+    /* background: var(--background-color); */
     background-size: 600% 600%;
-    animation: gradientMove 10s ease infinite;
+    /* animation: gradientMove 10s ease infinite; */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    #background-image {
+        width: 100%;
+        height: 81%;
+        position: absolute;
+        top: 11%;
+        bottom: 8%;
+        z-index: -1;
+    }
 }
 
 header {
@@ -29,12 +38,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 11%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 5%;
+    border-bottom: 2px solid black;
+    overflow: hidden;
 
     .logo {
         width: 35%;
@@ -55,6 +66,7 @@ header {
             width: 70px;
             height: 70px;
             object-fit: cover;
+            /* border-bottom: 1px solid black; */
         }
     }
 
@@ -105,10 +117,12 @@ header {
     flex-flow: column;
     align-items: center;
     gap: 20px;
-    background: white;
     margin-top: -70px;
     border-radius: 20px;
     padding-bottom: 20px;
+    border: 2px solid black;
+    background: transparent;
+    backdrop-filter: blur(3px);
 
     h1 {
         border-bottom: 2px solid black;
@@ -144,12 +158,14 @@ header {
     display: flex;
     align-items: center;
     flex-flow: column;
-    background: white;
     margin-top: -70px;
     gap: 20px;
     width: 70%;
     border-radius: 20px;
     padding-bottom: 15px;
+    border: 2px solid black;
+    background: transparent;
+    backdrop-filter: blur(3px);
 
     h1 {
         border-bottom: 2px solid black;
@@ -164,10 +180,12 @@ header {
     align-items: center;
     flex-flow: column;
     gap: 20px;
-    background: white;
     margin-top: -70px;
     border-radius: 20px;
     padding-bottom: 10px;
+    border: 2px solid black;
+    background: transparent;
+    backdrop-filter: blur(3px);
 
     h1 {
         border-bottom: 2px solid black;
@@ -207,6 +225,7 @@ footer {
     bottom: 0%;
     left: 0%;
     width: 100%;
+    height: 8%;
     background: #fdfdff;
     color: var(--text-color);
     text-align: center;
@@ -220,9 +239,9 @@ footer .small {
 }
 
 @media (min-width: 560px) {
+    
     header {
         .logo {
-
             .img {
                 width: 25%;
 
@@ -230,13 +249,13 @@ footer .small {
                     width: 100%;
                 }
             }
-
+            
             h1 {
                 font-size: 20px;
             }
         }
     }
-
+    
     .years {
         padding-top: 15px;
     }
@@ -245,22 +264,30 @@ footer .small {
         padding-top: 20px;
 
     }
-
+    
     .lt-test {
         padding-top: 20px;
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 660px) {
+    #background-image {
+        content: url("BirinchiMugalim1.jpg");
+        width: 100%;
+        height: 81%;
+        position: absolute;
+        top: 11%;
+        bottom: 8%;
+        z-index: -1;
+    }
     header {
-
         .logo {
             width: 50%;
 
             .img {
                 width: 27%;
             }
-
+            
             a {
                 font-size: 20px;
             }
