@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
 </head>
 
 <body>
@@ -31,14 +33,43 @@
         </div>
     </header>
     <img id="background-image" src="BirinchiMugalim2.jpg" alt="">
-    <div class="boy-years years">
+    <!-- <div class="boy-years years">
         <h1>Пожалуйста, укажите ваш возраст</h1>
         <botton class="ybtn byear10" href=""> 7\ /10 </botton>
         <botton class="ybtn byear1114" href=""> 11\ /14 </botton>
         <botton class="ybtn byear1518" href=""> 15\ /18 </botton>
         <botton class="ybtn byear18" href=""> 19\ /50 </botton>
-    </div>
+    </div> -->
+    <div class="age-card">
+        <p class="age-title">Пожалуйста, укажите ваш возраст</p>
 
+        <div class="age-grid">
+            <button class="age-btn" id="age-7-10">
+                <i class="ti ti-mood-kid age-icon"></i>
+                <span class="age-range">7 – 10</span>
+                <span class="age-label">Младший</span>
+            </button>
+            <button class="age-btn" id="age-11-14">
+                <i class="ti ti-school age-icon"></i>
+                <span class="age-range">11 – 14</span>
+                <span class="age-label">Подросток</span>
+            </button>
+            <button class="age-btn" id="age-15-18">
+                <i class="ti ti-backpack age-icon"></i>
+                <span class="age-range">15 – 18</span>
+                <span class="age-label">Юношеский</span>
+            </button>
+            <button class="age-btn" id="age-19-50">
+                <i class="ti ti-user age-icon"></i>
+                <span class="age-range">19 – 50</span>
+                <span class="age-label">Взрослый</span>
+            </button>
+        </div>
+
+        <div class="divider"></div>
+        <p class="age-hint">Выберите возрастную группу для продолжения</p>
+    </div>
+    <!-- -->
     <div class="boy-test hidden test test-boy-10">
         <h1>Пожалуйста, выберите предмет</h1>
         <a class="tbtn btn" href="./boy years/year7,10/Математика10/index.html">Математика</a>

@@ -6,12 +6,12 @@ let menus = document.querySelector(".menusa");
 
 let btnBoy = document.querySelector(".btn-boy");
 //years
-let boyYears = document.querySelector(".boy-years");
+let boyYears = document.querySelector(".age-card");
 //boy year
-let BoyYear10 = document.querySelector(".byear10");
-let BoyYear1114 = document.querySelector(".byear1114");
-let BoyYear1518 = document.querySelector(".byear1518");
-let BoyYear18 = document.querySelector(".byear18");
+let BoyYear10 = document.querySelector("#age-7-10");
+let BoyYear1114 = document.querySelector("#age-11-14");
+let BoyYear1518 = document.querySelector("#age-15-18");
+let BoyYear18 = document.querySelector("#age-19-50");
 //test boy
 let tests = document.querySelectorAll(".test");
 let testBoy10 = document.querySelector(".test-boy-10");
