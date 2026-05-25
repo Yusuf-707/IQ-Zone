@@ -603,3 +603,35 @@ footer .small {
         background-position: 0%;
     }
 }
+
+.uruvin {
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3%;
+    gap: 10px;
+
+    .header-uruvin {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3%;
+        width: 100%;
+        color: #0f172a;
+    }
+    a {
+        width: 95%;
+        height: 35px;
+        background: var(--bg);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color:rgb(46, 44, 44);
+    }
+}
