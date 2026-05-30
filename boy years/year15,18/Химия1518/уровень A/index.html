@@ -240,7 +240,7 @@
         </div>
         <button class="kontrol-btn" onclick="kontrol()">готов</button>
     </main>
-    <div class="modal">
+    <div class="modal-test hidden">
         <h2 class="answerTest" style="background-color: white; border-radius: 20px; width: 80%; text-align: center;">
         </h2>
         <h2 style="background-color: rgb(0, 160, 27);">правильный ответ</h2>
@@ -254,13 +254,27 @@
             <h2>/10</h2>
         </div>
     </div>
-    <div class="overlay hidden">
-        <div class="modalClose">
-            <div class="modalCloseHeader">
+    <div class="overlay hidden" id="overlay">
+        <div class="modal">
+
+            <div class="modal-top">
+                <button class="modal-close" id="closeBtn" aria-label="Закрыть">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
                 <h2>Предупреждение</h2>
-                <i class="fa-solid fa-xmark" id="CloseModalClose"></i>
             </div>
-            <h2>Внимание! Вы покинули сайт 2 раза. При следующем выходе сайт начнется с начала.</h2>
+
+            <div class="modal-body">
+                <p>
+                    Внимание! Вы покинули сайт <strong>2 раза</strong>.<br>
+                    При следующем выходе сайт начнётся с начала.
+                </p>
+                <button class="btn-ok" id="okBtn">Понятно</button>
+            </div>
+
         </div>
     </div>
     <footer>

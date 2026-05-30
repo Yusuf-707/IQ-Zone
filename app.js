@@ -189,3 +189,15 @@ footer.addEventListener("click", () => {
     boyYears.classList.add("hidden");
     girlYears.classList.add("hidden");
 })
+
+
+let closeUruvin = document.querySelectorAll(".fa-arrow-left-long")
+closeUruvin.forEach((close)=>{
+    close.addEventListener("click", ()=> {
+        let uruvins = document.querySelectorAll(".uruvin")
+        uruvins.forEach((uruvin)=>{
+            uruvin.classList.add("hidden")
+        })
+        boyYears.classList.remove("hidden")
+    })
+})

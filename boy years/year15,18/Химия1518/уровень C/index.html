@@ -176,7 +176,8 @@
         <div class="test-form">
             <h2>Электроотрицательность — это способность атома:</h2>
             <form>
-                <input type="radio" name="q14" id="q14a" value="true"><label for="q14a">Притягивать электроны</label><br>
+                <input type="radio" name="q14" id="q14a" value="true"><label for="q14a">Притягивать
+                    электроны</label><br>
                 <input type="radio" name="q14" id="q14b" value="false"><label for="q14b">Отдавать протоны</label><br>
                 <input type="radio" name="q14" id="q14c" value="false"><label for="q14c">Испаряться</label><br>
                 <input type="radio" name="q14" id="q14d" value="false"><label for="q14d">Увеличивать массу</label><br>
@@ -208,7 +209,8 @@
             <form>
                 <input type="radio" name="q17" id="q17b" value="false"><label for="q17b">Передаче протонов</label><br>
                 <input type="radio" name="q17" id="q17c" value="false"><label for="q17c">Растворении</label><br>
-                <input type="radio" name="q17" id="q17a" value="true"><label for="q17a">Общих электронных парах</label><br>
+                <input type="radio" name="q17" id="q17a" value="true"><label for="q17a">Общих электронных
+                    парах</label><br>
                 <input type="radio" name="q17" id="q17d" value="false"><label for="q17d">Испарении</label><br>
             </form>
         </div>
@@ -245,8 +247,9 @@
         </div>
         <button class="kontrol-btn" onclick="kontrol()">готов</button>
     </main>
-    <div class="modal">
-        <h2 class="answerTest" style="background-color: white; border-radius: 20px; width: 80%; text-align: center;"></h2>
+    <div class="modal-test hidden">
+        <h2 class="answerTest" style="background-color: white; border-radius: 20px; width: 80%; text-align: center;">
+        </h2>
         <h2 style="background-color: rgb(0, 160, 27);">правильный ответ</h2>
         <div class="trueModaltext modalText">
             <h2 class="truetext">0</h2>
@@ -258,13 +261,27 @@
             <h2>/10</h2>
         </div>
     </div>
-    <div class="overlay hidden">
-        <div class="modalClose">
-            <div class="modalCloseHeader">
+    <div class="overlay hidden" id="overlay">
+        <div class="modal">
+
+            <div class="modal-top">
+                <button class="modal-close" id="closeBtn" aria-label="Закрыть">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
                 <h2>Предупреждение</h2>
-                <i class="fa-solid fa-xmark" id="CloseModalClose"></i>
             </div>
-            <h2>Внимание! Вы покинули сайт 2 раза. При следующем выходе сайт начнется с начала.</h2>
+
+            <div class="modal-body">
+                <p>
+                    Внимание! Вы покинули сайт <strong>2 раза</strong>.<br>
+                    При следующем выходе сайт начнётся с начала.
+                </p>
+                <button class="btn-ok" id="okBtn">Понятно</button>
+            </div>
+
         </div>
     </div>
     <footer>

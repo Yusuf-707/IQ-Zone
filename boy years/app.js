@@ -19,7 +19,8 @@ let trueText = document.querySelector(".truetext");
 let falseText = document.querySelector(".falsetext");
 // modal close
 let overlayClose = document.querySelector(".overlay");
-let CloseModalClose = document.getElementById("CloseModalClose");
+let CloseModalClose = document.querySelector(".fa-xmark");
+let CloseModalClose2 = document.querySelector(".btn-ok")
 //footer
 let footer = document.querySelector("footer");
 
@@ -115,5 +116,8 @@ document.addEventListener("mouseleave", (e) => {
 CloseModalClose.addEventListener("click", () => {
   overlayClose.classList.add("hidden");
 });
+CloseModalClose2.addEventListener("click", () => {
+  overlayClose.classList.add("hidden");
+})
 //footer
 footer.addEventListener("click", hiddenMenus);

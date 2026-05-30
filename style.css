@@ -54,7 +54,6 @@ header {
     justify-content: space-between;
     padding: 0px 5%;
     border-bottom: 2px solid black;
-    overflow: hidden;
 
     .logo {
         width: 35%;
@@ -261,9 +260,10 @@ header {
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 2.5rem 2rem;
-    width: 100%;
+    width: 80%;
     max-width: 620px;
     height: 100%;
+    margin: 1rem auto;
     box-shadow: 0px 4px 12px white;
 }
 
@@ -605,7 +605,8 @@ footer .small {
 }
 
 .uruvin {
-    width: 70%;
+    max-width: 620px;
+    width: 80%;
     display: flex;
     flex-flow: column;
     background: transparent;
@@ -614,6 +615,8 @@ footer .small {
     border-radius: 20px;
     padding: 3%;
     gap: 10px;
+    margin: 1rem auto;
+    box-shadow: 0px 4px 12px white;
 
     .header-uruvin {
         display: flex;
