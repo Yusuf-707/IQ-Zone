@@ -82,10 +82,11 @@ function hesapla() {
   let timeSecunt = 60 - sekunta;
   let list = JSON.parse(localStorage.getItem("list")) || [];
   list.push({
-    true: correct,
-    false: falseCorrect,
+    correct : correct,
+    falseCorrect : falseCorrect,
     time: `${timeMinut < 10 ? "0" + timeMinut : timeMinut}:${timeSecunt < 10 ? "0" + timeSecunt : timeSecunt}`,
-    data: `${hour}:${minut}, ${date}.${month}.${year}`,
+    data: `${date}.${month}.${year}`,
+    hour : `${hour}:${minut}`
   });
   localStorage.setItem("list", JSON.stringify(list));
   console.log(list);

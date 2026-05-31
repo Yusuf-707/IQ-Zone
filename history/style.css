@@ -1,0 +1,558 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:root {
+    --text-color: rgb(46, 44, 44);
+    --background-color: linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+header {
+    width: 100%;
+    height: 11%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%;
+    border-bottom: 2px solid black;
+    z-index: 2;
+
+    .hour {
+        display: flex;
+        border: 2px solid black;
+        border-radius: 50px;
+        z-index: 1501;
+        box-shadow: 0 0 10px black;
+    }
+
+    .logo {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        overflow: hidden;
+
+        a {
+            width: 70%;
+            font-size: 25px;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+        }
+    }
+
+    .menus {
+        display: flex;
+        flex-flow: column;
+
+        i {
+            margin-right: 30px;
+            font-size: 30px;
+        }
+
+        nav {
+            position: fixed;
+            top: 60px;
+            right: 15px;
+            display: flex;
+            flex-flow: column;
+            background-color: white;
+            width: 100px;
+            align-items: center;
+            border-radius: 0px 0px 15px 15px;
+            z-index: 1500;
+            box-shadow: 0 0 10px black;
+
+            li {
+                padding: 10px 0px;
+                border-top: 2px solid black;
+                list-style: none;
+                width: 100%;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-color);
+                }
+            }
+
+            li:hover {
+                background-color: grey;
+            }
+
+        }
+    }
+}
+
+#background-image {
+    width: 100%;
+    height: 81%;
+    position: fixed;
+    top: 11%;
+    bottom: 8%;
+    z-index: -1;
+}
+
+main {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 87px;
+    padding-top: 160px;
+    position: absolute;
+    z-index: 0;
+    min-height: 81vh;
+}
+
+/* ul */
+.list-group {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 480px;
+}
+
+/* li */
+.wrap {
+    width: 100%;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* ─── Header ─────────────────────────────────────────── */
+.card-header {
+    padding: 1.125rem 1.5rem;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.session-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #888780;
+}
+
+.session-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.time-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #f5f4f0;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.time-badge i {
+    font-size: 14px;
+    color: #888780;
+}
+
+.time-badge span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+/* ─── Body ───────────────────────────────────────────── */
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ─── Ring section ───────────────────────────────────── */
+.ring-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ring-wrap {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+}
+
+.ring-wrap svg {
+    width: 88px;
+    height: 88px;
+    display: block;
+}
+
+.ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.ring-pct {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.ring-sub {
+    font-size: 10px;
+    color: #b4b2a9;
+    margin-top: 2px;
+}
+
+/* ─── Stat rows ──────────────────────────────────────── */
+.ring-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-green {
+    background: #639922;
+}
+
+.dot-red {
+    background: #E24B4A;
+}
+
+.dot-gray {
+    background: #b4b2a9;
+}
+
+.stat-name {
+    font-size: 13px;
+    color: #5f5e5a;
+}
+
+.stat-val {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.stat-val .denom {
+    font-size: 12px;
+    font-weight: 400;
+    color: #b4b2a9;
+}
+
+/* ─── Divider ────────────────────────────────────────── */
+.divider {
+    height: 0.5px;
+    background: rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.25rem;
+}
+
+/* ─── Metric cards ───────────────────────────────────── */
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.metric {
+    background: #f5f4f0;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metric-icon {
+    font-size: 16px;
+    color: #888780;
+    margin-bottom: 2px;
+}
+
+.metric-val {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #b4b2a9;
+}
+
+/* ─── Footer ─────────────────────────────────────────── */
+.card-footer {
+    padding: 0.875rem 1.5rem;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.08);
+    background: #f9f8f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #b4b2a9;
+}
+
+.footer-left i {
+    font-size: 14px;
+}
+
+.status-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #EAF3DE;
+    color: #3B6D11;
+    border: 0.5px solid #C0DD97;
+}
+
+.status-pill i {
+    font-size: 13px;
+}
+
+/* ─── Dark mode ──────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+    .card {
+        background: transparent;
+        backdrop-filter: blur(4px);
+        border-color: rgb(0, 0, 0);
+        box-shadow: 0 0 10px white;
+    }
+
+    .card-header {
+        border-bottom-color: rgba(255, 255, 255, 0.07);
+    }
+
+    .session-label {
+        color: #c5c3bb;
+    }
+
+    .session-date {
+        color: #e8e6df;
+    }
+
+    .time-badge {
+        background: #2e2e2a;
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .time-badge i {
+        color: #5f5e5a;
+    }
+
+    .time-badge span {
+        color: #e8e6df;
+    }
+
+    .ring-pct {
+        color: #e8e6df;
+    }
+
+    .stat-name {
+        color: #bab8b1;
+    }
+
+    .stat-val {
+        color: #e8e6df;
+    }
+
+    .divider {
+        background: rgba(255, 255, 255, 0.07);
+    }
+
+    .metric {
+        background: #2e2e2a;
+    }
+
+    .metric-icon {
+        color: #5f5e5a;
+    }
+
+    .metric-val {
+        color: #e8e6df;
+    }
+
+    .metric-label {
+        color: #5f5e5a;
+    }
+
+    .card-footer {
+        background: #1e1e1c;
+        border-top-color: rgba(255, 255, 255, 0.07);
+    }
+
+    .footer-left {
+        color: #5f5e5a;
+    }
+
+    .status-pill {
+        background: #1e3010;
+        color: #97C459;
+        border-color: #3B6D11;
+    }
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 8%;
+    background: #fdfdff;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 2px solid black;
+}
+
+footer .small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media screen and (max-width: 660px) {
+    #background-image {
+        content: url("../boy years/BirinchiMugalim2.jpg");
+        width: 100%;
+        height: 81%;
+        position: fixed;
+        top: 11%;
+        bottom: 8%;
+        z-index: -1;
+    }
+
+    header {
+        .logo {
+            width: 50%;
+
+            .img {
+                width: 27%;
+            }
+
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        .logo {
+            width: 60%;
+        }
+    }
+
+    .card-header,
+    .card-body,
+    .card-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .ring-section {
+        gap: 1rem;
+    }
+
+    .metrics {
+        gap: 8px;
+    }
+
+    .metric {
+        padding: 10px;
+    }
+
+    .metric-val {
+        font-size: 14px;
+    }
+}
