@@ -43,12 +43,17 @@ function hiddenMenus() {
 function hesapla() {
   let correct = 0;
   let falseCorrect = 0;
+  let noCorrect = 0;
   let answers = document.querySelectorAll('input[type="radio"]:checked');
   answers.forEach((item) => {
     if (item.value === "true") {
       correct++;
-    } else {
+    } else if (item.value === "false") {
       falseCorrect++;
+    } 
+    let corrrectAndFalseCorrect = 10 - correct - falseCorrect;
+    if (corrrectAndFalseCorrect > 0){
+      noCorrect =corrrectAndFalseCorrect;
     }
   });
   if (correct == 10) {
@@ -84,6 +89,7 @@ function hesapla() {
   list.push({
     correct : correct,
     falseCorrect : falseCorrect,
+    noCorrect : noCorrect,
     time: `${timeMinut < 10 ? "0" + timeMinut : timeMinut}:${timeSecunt < 10 ? "0" + timeSecunt : timeSecunt}`,
     data: `${date}.${month}.${year}`,
     hour : `${hour}:${minut}`

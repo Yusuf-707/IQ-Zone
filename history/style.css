@@ -468,9 +468,9 @@ main {
     }
 
     .status-pill {
-        background: #1e3010;
-        color: #97C459;
-        border-color: #3B6D11;
+        background: #650000;
+        color: #e77070;
+        border-color: #e77070;
     }
 }
 
@@ -554,5 +554,62 @@ footer .small {
 
     .metric-val {
         font-size: 14px;
+    }
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1502;
+    
+    .modal {
+        max-width: 300px;
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        /* border: 2px solid var(--text-color); */
+        box-shadow: 0 0 5px white;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        .modal-text {
+            font-size: 16px;
+            color: var(--text-color);
+            text-align: center;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-button {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-top: 1px solid var(--text-color);
+
+            #close-modal-btn {
+                padding: 5px 10px;
+                border-radius: 15px;
+                border: 2.5px solid rgb(122,248,12);
+                background-color: green;
+                color: rgb(122, 248, 12);
+            }
+            #delete-btn {
+                padding: 5px 10px;
+                border-radius: 15px;
+                border: 2.5px solid rgb(252, 142, 142);
+                background-color: red;
+                color: rgb(252, 142, 142);
+            }
+        }
     }
 }

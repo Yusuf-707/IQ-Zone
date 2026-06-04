@@ -2,7 +2,7 @@ let header = document.querySelector("header");
 let menu = document.querySelector(".menu");
 let menus = document.querySelector(".menusa");
 let listGroup = document.querySelector(".list-group");
-
+let listId = 0;
 menu.addEventListener("click", () => {
   menus.classList.toggle("hidden");
 });
@@ -63,7 +63,7 @@ if (showList.length) {
                                         <span class="stat-dot dot-gray"></span>
                                         <span class="stat-name">Ответ не получен</span>
                                     </div>
-                                    <span class="stat-val">0<span class="denom">/10</span></span>
+                                    <span class="stat-val">${list.noCorrect}<span class="denom">/10</span></span>
                                 </div>
                             </div>
                         </div>
@@ -92,12 +92,55 @@ if (showList.length) {
                         </div>
                         <div class="status-pill">
                             <i class="ti ti-circle-check"></i>
-                            Завершено
+                            удалить
                         </div>
                     </div>
 
                 </div>
             </li>`;
-    console.log(list)
   });
 }
+let statusPill = document.querySelectorAll(".status-pill");
+let overlay = document.querySelector(".overlay");
+let closeBtn = document.querySelector("#close-modal-btn");
+let deleteBtn = document.querySelector("#delete-btn");
+closeBtn.addEventListener("click", () => {
+  overlay.classList.add("hidden");
+  listId = 0;
+});
+statusPill.forEach((e, i) => {
+  e.addEventListener("click", () => {
+    deleteList(i);
+  });
+});
+console.log(listId);
+function deleteList(id) {
+  listId = id;
+  overlay.classList.remove("hidden");
+}
+function deleteListFromStorage() {
+  showList.splice(listId, 1);
+  localStorage.setItem("list", JSON.stringify(showList));
+  location.reload();
+  listId = 0;
+}
+deleteBtn.addEventListener("click", deleteListFromStorage);
+
+let correct = list.correct;
+let wrong = list.falseCorrect;
+let total = 10;
+let rc = document.querySelector("ring-correct");
+let rw = document.querySelector("ring-wong");
+let circ = 226.2;
+var cFill = circ * (correct / total);
+rc.setAttribute("stroke-dashoffset", circ - cFill);
+
+// Kırmızı yay (yeşilin bittiği yerden başlar)
+var wFill = circ * (wrong / total);
+var wRot = -90 + (correct / total) * 360;
+rw.setAttribute("transform", "rotate(" + wRot + " 44 44)");
+rw.setAttribute("stroke-dashoffset", circ - wFill);
+
+// Ortadaki yüzde yazısı
+var pct = Math.round((correct / total) * 100);
+document.querySelector(".ring-pct").textContent = pct + "%";
